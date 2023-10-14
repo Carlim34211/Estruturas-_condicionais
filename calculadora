@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int calculadora_soma(int num, int num1)
+{
+    return num + num1;
+}
+int calculadora_mult(int num, int num1)
+{
+    return num * num1;
+}
+int calculadora_sub(int num, int num1)
+{
+    return num - num1;
+}
+int calculadora_div(int num, int num1)
+{
+    if (num1 == 0)
+    {
+        printf("Erro: divisão por zero.\n");
+        return 0;
+    }
+    return num / num1;
+}
+
+int main()
+{
+    int number1, number2;
+    int opc;
+
+    do
+    {
+        printf("\t1 - Soma\n\t2 - Subtração\n\t3 - Divisao\n\t4 - Multiplicação\n\t5 - sair\ninput:");
+        scanf("%d", &opc);
+        switch (opc)
+        {
+
+        case 1:
+            printf("\nInsira os valores:\n");
+            scanf("%d %d", &number1, &number2);
+            printf("\tSoma: %d\n", calculadora_soma(number1, number2));
+            break;
+        case 2:
+            printf("\nInsira os valores:\n");
+            scanf("%d %d", &number1, &number2);
+            printf("\tSubtração: %d\n", calculadora_sub(number1, number2));
+            break;
+        case 3:
+            printf("\nInsira os valores:\n");
+            scanf("%d %d", &number1, &number2);
+            printf("\tDivisão: %d\n", calculadora_div(number1, number2));
+            break;
+        case 4:
+            printf("\nInsira os valores:\n");
+            scanf("%d %d", &number1, &number2);
+            printf("\tMultiplicação: %d\n", calculadora_mult(number1, number2));
+            break;
+        default:
+            printf("\n Opc invalida!\n");
+            break;
+        }
+
+    } while (5 == NULL);
+
+    return 0;
+}
