@@ -55,11 +55,14 @@ int main()
             printf("\tMultiplicação: %d\n", calculadora_mult(number1, number2));
             break;
         default:
-            printf("\n Opc invalida!\n");
-            break;
+            if (opc != 5)
+            {
+                printf("\n Opc invalida!\n");
+                break;
+            }
         }
 
-    } while (5 == NULL);
+    } while (opc != 5);
 
     return 0;
 }
